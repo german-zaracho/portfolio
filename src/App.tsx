@@ -1,11 +1,9 @@
 import './App.css';
 import { useEffect } from 'react';
 import NavItem from './components/NavItem.tsx';
-import TechnologiesTag from './components/TechnologiesTag.tsx';
-import Proyect from './components/Proyect.tsx';
+import Project from './components/Project.tsx';
 
 function App() {
-  const imgs = import.meta.glob('./assets/imgs/*.{png,jpg,jpeg,gif}', { eager: true }) as Record<string, { default: string }>;
 
   // Añadir la lógica para el hover del mouse de forma más eficiente
   const handleMouseMove = (e: MouseEvent) => {
@@ -65,25 +63,30 @@ function App() {
           <section className="flex flex-col">
             <div>
               <ul className='group'>
-                <Proyect 
-                title = 'InPlot'
-                description = 'Web app for discovering and sharing opinions on movies and series. Create and publish reviews, engage with others through comments, and personalize your profile. Explore other users’ reviews and track your own contributions. Administrators have tools to manage content, ensuring a well-organized and engaging community.'
-                img = '../assets/imgs/inplot-1.png'
-                tags={["PHP", "Firebase", "Tailwind"]}
+                <Project
+                  title='InPlot'
+                  description='Web app for discovering and sharing opinions on movies and series. Create and publish reviews, engage with others through comments, and personalize your profile. Explore other users’ reviews and track your own contributions. Administrators have tools to manage content, ensuring a well-organized and engaging community.'
+                  img='../assets/imgs/inplot-1.png'
+                  tags={["PHP", "Firebase", "Tailwind"]}
+                  githubLink='http://www.github.com'
+                  webLink='http://www.github.com'
                 />
-                <Proyect 
-                title = 'InPlot'
-                description = 'Web app for discovering and sharing opinions on movies and series. Create and publish reviews, engage with others through comments, and personalize your profile. Explore other users’ reviews and track your own contributions. Administrators have tools to manage content, ensuring a well-organized and engaging community.'
-                img = '../assets/imgs/inplot-1.png'
-                tags={["PHP", "Firebase", "Tailwind"]}
+                <Project
+                  title='InPlot'
+                  description='Web app for discovering and sharing opinions on movies and series. Create and publish reviews, engage with others through comments, and personalize your profile. Explore other users’ reviews and track your own contributions. Administrators have tools to manage content, ensuring a well-organized and engaging community.'
+                  img='../assets/imgs/inplot-1.png'
+                  tags={["PHP", "Firebase", "Tailwind"]}
+                  githubLink='http://www.github.com'
+                  webLink='http://www.github.com'
                 />
-                <Proyect 
-                title = 'InPlot'
-                description = 'Web app for discovering and sharing opinions on movies and series. Create and publish reviews, engage with others through comments, and personalize your profile. Explore other users’ reviews and track your own contributions. Administrators have tools to manage content, ensuring a well-organized and engaging community.'
-                img = '../assets/imgs/inplot-1.png'
-                tags={["PHP", "Firebase", "Tailwind"]}
+                <Project
+                  title='InPlot'
+                  description='Web app for discovering and sharing opinions on movies and series. Create and publish reviews, engage with others through comments, and personalize your profile. Explore other users’ reviews and track your own contributions. Administrators have tools to manage content, ensuring a well-organized and engaging community.'
+                  img='../assets/imgs/inplot-1.png'
+                  tags={["PHP", "Firebase", "Tailwind"]}
+                  githubLink='http://www.github.com'
+                  webLink='http://www.github.com'
                 />
-                
               </ul>
             </div>
           </section>

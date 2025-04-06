@@ -1,13 +1,16 @@
 import TechnologiesTag from "./TechnologiesTag";
+import ProjectLinks from "./ProjectLinks";
 
-interface ProyectProps {
+interface ProjectProps {
     title: string;
     description: string;
     img: string;
     tags: string[];
+    githubLink: string;
+    webLink:string;
 }
 
-const Proyect: React.FC<ProyectProps> = ({ title, description, img, tags }) => {
+const Project: React.FC<ProjectProps> = ({ title, description, img, tags, githubLink, webLink }) => {
     const imgs = import.meta.glob('../assets/imgs/*.{png,jpg,jpeg,gif}', { eager: true }) as Record<string, { default: string }>;
     return (
         <li className='group-hover:opacity-50 hover:opacity-100 transition-opacity'>
@@ -16,11 +19,17 @@ const Proyect: React.FC<ProyectProps> = ({ title, description, img, tags }) => {
                 <div className='p-5'>
                     <h3 className='text-[white] group-hover:text-[rgb(94,234,212,1)] text-left'>{title}</h3>
                     <p className='text-left'>{description}</p>
-                    <TechnologiesTag tags={tags} />
+                    <div className="flex flex-row justify-between">
+                        <TechnologiesTag 
+                            tags={tags} />
+                        <ProjectLinks
+                            githubLink={githubLink}
+                            webLink={webLink}/>
+                    </div>
                 </div>
             </div>
         </li>
     );
 };
 
-export default Proyect;
+export default Project;
